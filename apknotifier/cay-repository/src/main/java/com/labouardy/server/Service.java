@@ -3,9 +3,10 @@ package com.labouardy.server;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.labouardy.APKObserver;
 import com.labouardy.model.APK;
 import com.labouardy.model.Device;
-import com.labouardy.observer.APKObserver;
+
 
 public class Service implements APKObserver{
 	private Collection<Device> devices;

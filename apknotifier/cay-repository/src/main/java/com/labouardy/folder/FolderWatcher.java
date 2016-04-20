@@ -7,8 +7,8 @@ import java.util.Collection;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import com.labouardy.APKObservable;
 import com.labouardy.model.APK;
-import com.labouardy.observer.APKObservable;
 import com.labouardy.server.Service;
 
 @Component
@@ -19,7 +19,7 @@ public class FolderWatcher implements APKObservable{
 		services=new ArrayList<Service>();
 	}
 	
-	@Scheduled(cron="* * * * * *")
+	@Scheduled(cron="0 0/2 * * * ?")
 	public void monitor() throws IOException, InterruptedException{
 		System.out.println("check");
 		APK apk=new APK();

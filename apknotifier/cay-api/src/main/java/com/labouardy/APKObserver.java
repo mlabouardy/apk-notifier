@@ -1,4 +1,4 @@
-package com.labouardy.observer;
+package com.labouardy;
 
 import com.labouardy.model.APK;
 

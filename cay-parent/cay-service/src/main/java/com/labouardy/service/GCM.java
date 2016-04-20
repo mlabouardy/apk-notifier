@@ -12,16 +12,16 @@ import com.labouardy.model.Device;
 
 @Component
 public class GCM {
-	
-	@Value("${cay.apk.key}")
-	private String API_KEY;
-	
+
+//	@Value("${cay.apk.key}")
+	private String API_KEY="";
+
 	private static final Logger logger=Logger.getLogger(GCM.class.getName());
 	private static final String PACKAGE_KEY="package";
 	private static final String URL_KEY="url";
 	private static final String VERSION_KEY="version";
 	private static final int RETRY_TIMES=1;
-	
+
 	public void sendNotification(Device device, APK apk){
 		System.out.println("Senf notification "+API_KEY);
 		final Sender sender=new Sender(API_KEY);

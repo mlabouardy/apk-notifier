@@ -1,6 +1,6 @@
 package com.labouardy.repository;
 
-import org.jboss.logging.Logger;
+import org.apache.log4j.Logger;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import com.labouardy.model.APK;
@@ -13,7 +13,7 @@ public class FolderWatcher extends Watcher{
 	@Override
 	@Scheduled(cron="0 0/2 * * * ?")
 	public void monitor(){
-		logger.debug("Checking for new apk");
+		logger.info("Checking for new apk");
 		APK apk=new APK();
 		notifyServices(apk);
 	}

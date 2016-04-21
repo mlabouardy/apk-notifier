@@ -2,11 +2,15 @@ package com.labouardy.repository;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
+import org.springframework.stereotype.Component;
+
 import com.labouardy.api.APKObservable;
 import com.labouardy.api.ApkMonitor;
 import com.labouardy.api.Service;
 import com.labouardy.model.APK;
 
+@Component
 public abstract class Watcher implements APKObservable, ApkMonitor{
 	private Collection<Service> services;
 	

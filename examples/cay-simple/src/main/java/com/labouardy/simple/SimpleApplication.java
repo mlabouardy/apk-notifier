@@ -18,12 +18,11 @@ public class SimpleApplication {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		ConfigurableApplicationContext ctx=SpringApplication.run(SimpleApplication.class, args);
-		System.out.println("workign");
 		ServiceImpl service=new ServiceImpl();
 		IntStream.iterate(1, e -> e+1)
 		         .limit(5)
 		         .forEach(e -> service.addDevice(new Device(String.valueOf(e))));
-		Watcher watcher=ctx.getBean(FolderWatcher.class);
+		FolderWatcher watcher=ctx.getBean(FolderWatcher.class);
 		watcher.subscribe(service);
 		watcher.monitor();
 	}

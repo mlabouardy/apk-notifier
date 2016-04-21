@@ -11,6 +11,7 @@
 		<module>cay-api</module>
 		<module>cay-repository</module>
 		<module>cay-service</module>
+		<module>cay-repository-ftp</module>
 	</modules>
 
 	<parent>

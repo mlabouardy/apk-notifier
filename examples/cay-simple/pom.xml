@@ -42,7 +42,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.labouardy.cay</groupId>
-			<artifactId>cay-repository</artifactId>
+			<artifactId>cay-repository-ftp</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

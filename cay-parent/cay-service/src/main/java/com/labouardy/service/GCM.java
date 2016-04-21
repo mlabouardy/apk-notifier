@@ -23,7 +23,8 @@ public class GCM {
 	private static final int RETRY_TIMES=1;
 
 	public void sendNotification(Device device, APK apk){
-		System.out.println("Senf notification "+API_KEY);
+		logger.debug("Senf notification "+API_KEY);
+		
 		final Sender sender=new Sender(API_KEY);
 		final Message message = new Message.Builder()
 								    .addData(PACKAGE_KEY, apk.getPackageName())

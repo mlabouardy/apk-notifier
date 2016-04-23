@@ -15,6 +15,8 @@ public class Device implements Serializable{
 	@GeneratedValue
 	private Long id;
 	
+	private String regId;
+	
 	private String name;
 
 	public Long getId() {
@@ -32,7 +34,12 @@ public class Device implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
 
+	public String getRegId() {
+		return regId;
+	}
+
+	public void setRegId(String regId) {
+		this.regId = regId;
+	}
 }

@@ -57,6 +57,11 @@
 			<artifactId>github-api</artifactId>
 			<version>1.75</version>
 		</dependency>
+		<dependency>
+			<groupId>com.google.gcm</groupId>
+			<artifactId>gcm-server</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>

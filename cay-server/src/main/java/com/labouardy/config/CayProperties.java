@@ -19,6 +19,25 @@ public class CayProperties {
     @Valid
 	private Git git;
 	
+	@NotNull
+    @Valid
+	private API api;
+	
+	public static class API{
+		
+		@NotEmpty
+		private String key;
+
+		public String getKey() {
+			return key;
+		}
+
+		public void setKey(String key) {
+			this.key = key;
+		}
+		
+	}
+	
 	public static class Server {
 		
 		@NotEmpty

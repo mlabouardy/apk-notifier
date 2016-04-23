@@ -6,13 +6,12 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import com.labouardy.annotation.EnableCayServer;
 import com.labouardy.config.CayProperties;
 
+@EnableCayServer
 @SpringBootApplication
-@EnableConfigurationProperties(CayProperties.class)
-@EntityScan("com.labouardy.model")
-@EnableJpaRepositories("com.labouardy.repository")
-@ComponentScan({"com.labouardy.resource","com.labouardy.admin","com.labouardy.service","com.labouardy.config"})
 public class CayServerApplication {
 
 	public static void main(String[] args) {

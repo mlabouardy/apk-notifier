@@ -19,8 +19,6 @@ public class CayProperties {
     @Valid
 	private Git git;
 	
-	@NotNull
-    @Valid
 	private API api;
 	
 	public static class API{

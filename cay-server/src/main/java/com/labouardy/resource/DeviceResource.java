@@ -9,8 +9,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.labouardy.model.Device;
 import com.labouardy.model.Message;
+import com.labouardy.model.WebHookConfig;
 import com.labouardy.repository.DeviceRepository;
 
 @RequestMapping("devices")
@@ -40,6 +45,4 @@ public class DeviceResource {
 		deviceRepository.delete(id);
 		return new ResponseEntity<Message>(new Message(true), HttpStatus.ACCEPTED);
 	}
-	
-	
 }

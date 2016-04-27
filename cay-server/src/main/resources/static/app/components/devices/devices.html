@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Registration ID</th>
+        </tr>
+      </thead>
+      <tbody>
+      	<tr ng-repeat="device in $ctrl.devices">
+      		<td>{{device.name}}</td>
+      		<td>{{device.regId}}</td>
+      	</tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" ng-app="cayDashboard">
 <head>
-<meta charset="ISO-8859-1"></meta>
-<title>Admin page</title>
+	<meta charset="ISO-8859-1"></meta>
+	<title>Cay Dashboard</title>
+	<link rel="stylesheet" th:href="@{bower_components/bootstrap-css/css/bootstrap.min.css}"></link>
+	<link rel="stylesheet" th:href="@{assets/css/style.css}"></link>
 </head>
-<body>Home
+<body class="container-fluid custom-container" ng-controller="MainCtrl">
+	<devices></devices>
 </body>
+<script th:src="@{bower_components/angular/angular.min.js}" charset="utf-8"></script>
+<script th:src="@{bower_components/lodash/lodash.js}" charset="utf-8"></script>
+<script th:src="@{bower_components/restangular/dist/restangular.min.js}" charset="utf-8"></script>
+<script th:src="@{app/services/cayServices.js}" charset="utf-8"></script>
+<script th:src="@{app/services/DeviceService/DeviceService.js}" charset="utf-8"></script>
+<script th:src="@{app/components/cayComponents.js}" charset="utf-8"></script>
+<script th:src="@{app/components/devices/devices.js}" charset="utf-8"></script>
+<script th:src="@{app/app.js}" charset="utf-8"></script>
+
 </html>
